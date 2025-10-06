@@ -1,15 +1,35 @@
 function sumArray(arr) {
     let sum = 0;
-    
-    for (let el of arr ) {
+    for (const el of arr ) {
         sum += el;
     }
 
     return sum;
-}
+};
+
+function sumArrayElements(arr) {
+    let sum = 0;
+    for (const value of arr) {
+        const num = Number(value);
+        if (!isNaN(num)) {
+            sum += num;
+        } else {
+            console.log(`Елемент "${value}" не є числом, пропускаємо`);
+        }
+    }
+    return sum;
+};
+
 
 const numbers = [10, 20, 30, 40];
-const strings = ["5", "15", "hello", "20"];
+const strings = ['5', '15', 'hello', '20'];
+const mixed = [10, '20', 30, 'abc', '40', 50];
 
-console.log("Сума чисел:", sumArray(numbers));
-console.log("Сума рядків:", sumArray(strings));
+console.log('Сума чисел:', sumArray(numbers));
+console.log('Сума string:', sumArray(strings));
+console.log('Сума numbers та strings:', sumArray(mixed));
+
+console.log('\nСума тільки чисел:', sumArrayElements(numbers));
+console.log('Сума тільки чисел у string:', sumArrayElements(strings));
+console.log('Сума тільки чисел у numbers та strings:', sumArrayElements(mixed));
+

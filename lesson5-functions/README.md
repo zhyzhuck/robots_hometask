@@ -1,4 +1,4 @@
-Lesson 4 - Objects, Arrays and Loops
+Lesson 5 - Functions. Modules
 In order to use this config you have to install the following NPM packages
 
 npm init

@@ -33,7 +33,7 @@ function reduceUserData(processed) {
         const response3 = await reduceUserData(response2);
         return response3;
     } catch (error) {
-        console.error("Виникла помилка:", error.message);
+        console.error('Виникла помилка:', error.message);
         throw error;
     }
 })();
